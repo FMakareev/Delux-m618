@@ -1,0 +1,27 @@
+@@include('template/head.html',{
+"title" : "Гарантии",
+"css" : "index.css"
+})
+@@include('template/header.html')
+<main class="main">
+
+    <section class="articles">
+        <div class="container">
+            <h2 class="main__title _left underline _green">
+                Статьи и новости
+            </h2>
+            @@include('template/articles-list.html', {
+            "length" : "4"
+            })
+        </div>
+
+    </section>
+
+    @@include('template/your-option.html', {
+    "bg" : "false"
+    })
+
+</main>
+
+@@include('template/footer.html')
+@@include('template/script.html')

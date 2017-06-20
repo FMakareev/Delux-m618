@@ -1,0 +1,23 @@
+.sprite__logo {
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../img/icons/sprite__logo.png') no-repeat top left;
+}
+
+.sprite__logo._compaero-logo {
+  background-position: 0px 0px;
+  width: 153px;
+  height: 41px;
+}
+
+.sprite__logo._company-logo {
+  background-position: 0px -61px;
+  width: 197px;
+  height: 64px;
+}
+
+.sprite__logo._ezidea-logo {
+  background-position: 0px -145px;
+  width: 51px;
+  height: 40px;
+}

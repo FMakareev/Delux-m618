@@ -1,0 +1,11 @@
+.your-option{
+  text-align: center;
+  padding: 9.375rem 0;
+  &._bg{
+    background-image: url(../img/your-option_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,19 @@
+<ul class="articles-list">
+    @@for(var i = 0; i < context.length;i++) {
+        <li class="articles-item">
+            <a href="#!" class="articles-link">
+                <div class="articles-link__left">
+                    <div class="articles-link__img">
+                        <img src="img/content/article-photo.jpg" alt="">
+                    </div>
+                </div>
+                <div class="articles-link__right">
+                    <h3 class="articles-link__title">название статьи</h3>
+                    <p class="articles-link__desc">С левой стороны мы видим фрагмент уже знакомого нам
+                        прорезиненного материала, который служит здесь опорой большому пальцу руки ...</p>
+                    <div href="#!" class="articles-link__open">Читать</div>
+                </div>
+            </a>
+        </li>
+    }
+</ul>

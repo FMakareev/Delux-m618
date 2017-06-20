@@ -1,0 +1,16 @@
+.guarantee{
+  padding: 8.75rem 0;
+  background-color: $super-light-gray;
+  p{
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    color: $light-blue;
+  }
+
+  &__content{
+    position: relative;
+    padding-left: 13.44rem;
+
+  }
+
+}
