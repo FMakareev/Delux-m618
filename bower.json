@@ -1,0 +1,17 @@
+{
+  "name": "wholesale_cabinet",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "FMakareev <fmakareev@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

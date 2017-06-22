@@ -1,10 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@@include('template/head.html',{
+"title" : "Корзина",
+"css" : "index.css"
+})
+@@include('template/header.html')
+<main class="main">
 
-</body>
-</html>
+    <section class="cart">
+        <div class="container">
+            <h2 class="main__title _left underline _green">
+                Корзина
+            </h2>
+        </div>
+        <div class="container">
+            <table class="product-table">
+                <thead class="product-header">
+                <tr>
+                    <th>
+                        Фото
+                    </th>
+                    <th>
+                        Наименование
+                    </th>
+                    <th>
+                        Количество
+                    </th>
+                    <th>
+                        Цена
+                    </th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody class="product-body">
+                <tr class="product-item">
+
+                    <td class="product-img">
+                        <div class="product-img__pic">
+                            <img src="img/content/content-img.png" alt="">
+                        </div>
+                    </td>
+
+                    <td class="product-name">
+                        Наименование и модель продукта
+                    </td>
+
+                    <td class="product-quantity">
+                        <div class="product-quantity__wrap">
+                            <button class="product-quantity__btn _minus">
+                                <i class="icon-minus"></i>
+                            </button>
+                            <input type="text" name="sum" id="" class="product-quantity__inp">
+                            <button class="product-quantity__btn _plus">
+                                <i class="icon-plus"></i>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td class="product-price">
+                        2333 руб
+                    </td>
+
+                    <td class="product-delete">
+                        <button class="product-delete__btn">
+                            <i class="icon-close"></i>
+                        </button>
+                    </td>
+
+                </tr>
+                </tbody>
+                <tfoot class="product-footer">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="product-quantity__result">Итого: 2 шт.</td>
+                    <td class="product-price__result">4666 руб</td>
+                    <td></td>
+                </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </section>
+    <div class="cart-form">
+        <form action="#!">
+            <div class="container">
+
+                <div class="cart-form__group underline _left _gray">
+                    <h3 class="section__title _uppercase _marker">Данные получателя</h3>
+                    <div class="cart-row clearfix">
+                        <div class="cart-col-6">
+                            <input type="text" name="fio" id="fio" class="cart-inp" placeholder="ФИО">
+                        </div>
+                        <div class="cart-col-3">
+                            <input type="email" name="email" id="email" class="cart-inp" placeholder="Email">
+                        </div>
+                        <div class="cart-col-3">
+                            <input type="tel" name="tel" id="tel" class="cart-inp" placeholder="Телефон">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-form__group underline _left _gray _noMB">
+                    <h3 class="section__title _uppercase _marker">Данные получателя</h3>
+                    <div class="cart-row clearfix">
+                        <div class="cart-col-6">
+                            <select name="delivery" id="delivery" class="cart-inp">
+                                <option value="Выберите способ доставки:" selected >Выберите способ доставки:</option>
+                                <option value="Выберите способ доставки:" selected >Выберите способ доставки:</option>
+                                <option value="Выберите способ доставки:" selected >Выберите способ доставки:</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cart-row clearfix">
+                        <div class="cart-col-6">
+                            <input type="text" name="city" id="city" class="cart-inp" placeholder="Город, область">
+                        </div>
+                        <div class="cart-col-3">
+                            <input type="text" name="street" id="street" class="cart-inp" placeholder="Улица">
+                        </div>
+                        <div class="cart-col-1-5">
+                            <input type="text" name="house" id="house" class="cart-inp" placeholder="Дом">
+                        </div>
+                        <div class="cart-col-1-5">
+                            <input type="text" name="room" id="room" class="cart-inp" placeholder="Кв.">
+                        </div>
+                    </div>
+                    <div class="cart-row clearfix">
+                        <div class="cart-col-3">
+                            <input type="text" name="post-index" id="post-index" class="cart-inp"
+                                   placeholder="Почтовый индекс">
+                        </div>
+                        <div class="cart-col-9">
+                            <input type="text" name="notes" id="notes" class="cart-inp" placeholder="Примечания">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-form__footer">
+                    <div class="cart-row clearfix">
+                        <div class="cart-col-6 cart-form__footer-left">
+                            <span  class="cart-form__result-title">Итого, сумма Вашего заказа вместе с доставкой:</span>
+                            <span  class="cart-form__result">5000 руб</span>
+                        </div>
+                        <div class="cart-col-6 cart-form__footer-right">
+                            <div class="cart-form__radio-wrap">
+                                <input type="radio" name="radio-group" id="radio1">
+                                <label for="radio1" class="cart-form__radio">
+                                    <span class="cart-form__radio-marker"></span>
+                                    Наличные курьеру
+                                </label>
+                            </div>
+                            <div class="cart-form__radio-wrap">
+                                <input type="radio" name="radio-group" id="radio2">
+                                <label for="radio2" class="cart-form__radio">
+                                    <span class="cart-form__radio-marker"></span>
+                                    Яндекс.касса
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-row clearfix">
+                    <div class="cart-col-6 cart-col-left-3">
+                        <button class="btn-main">
+                            Сделать заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</main>
+
+@@include('template/footer.html')
+@@include('template/script.html')

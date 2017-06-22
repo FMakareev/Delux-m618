@@ -1,5 +1,5 @@
 .articles{
-  padding: 8.75rem 0;
+  padding: 9.375rem 0;
   background-color: $super-light-gray;
   &-list{
     margin-right: -3.75rem;
@@ -65,11 +65,16 @@
       color: $light-blue;
       
       &:after{
-        content: '';
+        content: '\e907';
+        font-family: 'icons-font' !important;
         display: inline-block;
+        text-align: center;
         width: 2.813rem;
         height: 2.813rem;
         margin-left: 1.875rem;
+        line-height: 2.813rem;
+        font-weight: bold;
+        font-size: calcRem(36px);
         vertical-align: middle;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;

@@ -1,6 +1,9 @@
+@import "./util";
 @import "./variables";
 @import "./icons";
 @import "./fonts";
+
+
 
 *{
   box-sizing: border-box;
@@ -66,21 +69,26 @@ a{
 
 .container{
   position: relative;
-  max-width: 1830px;
+  max-width: 1170px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media(min-width: 1440px) {
+    max-width: 1830px;
+  }
 }
 
 .btn-main{
   display: inline-block;
   padding: 1.25rem 2.5rem;
+  background-color: #FF6D09;
   background-image: linear-gradient(to right, #FF6D09 0%, #FFAC01 100%);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  border: none;
   color: #ffffff;
   font-size: 2rem;
 
@@ -92,8 +100,9 @@ a{
 
 .main__title{
   position: relative;
-  padding-bottom: 30px;
-  margin-bottom: 6.25rem;
+  padding-bottom: 2.813rem;
+  margin-top: 0;
+  margin-bottom: 5.625rem;
   font-family: "GothamProBold";
   font-size: 3.125rem;
   color: $black;
@@ -106,13 +115,38 @@ a{
 }
 
 .section__title{
+  position: relative;
+  margin: 0;
+  padding-bottom: 2.813rem;
   text-align: left;
   font-family: "GothamProBold";
   font-size: 2rem;
   color: $black;
+
+  &._uppercase {
+    text-transform: uppercase;
+  }
+
+  &._marker{
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-right: 0.9375rem;
+      vertical-align: middle;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #ff9404;
+    }
+  }
+
 }
 
 .sm__title{
+  margin: 0;
+  padding-bottom: 2.8125rem;
   text-align: left;
   font-family: "GothamProBold";
   font-size: 1.75rem;
@@ -128,7 +162,7 @@ a{
     left: 0;
     right: 0;
     display: block;
-    width: 160px;
+    width: 10rem;
     height: 5px;
     margin: auto;
     background-color: #ff8404;
@@ -145,6 +179,13 @@ a{
       background-color: $light-green;
     }
   }
+
+  &._gray {
+    &:after{
+      background-color: #cadae4;
+    }
+  }
+
   &._left{
     &:after{
       right: inherit;
@@ -154,17 +195,42 @@ a{
 
 
 .marker-big {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   width: 10.63rem;
   height: 10.63rem;
   background-color: #ffbf10;
+  background-image: linear-gradient(to right, #ffc40d 0%, #ffbd10 100%);
   color: #ffffff;
   text-align: center;
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: calcRem(60px);
+  }
+
+  &._pos-abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  &._green {
+    background-color: #07e8a0;
+    background-image: linear-gradient(to right, #07e8a0 0%, #06e6bc 100%);
+    &:before{
+      background-color: #09cd8d;
+    }
+  }
 
   &__content{
     position: relative;

@@ -26,7 +26,7 @@ var path_src = {
     "src" : "src/",
     "html" : 'src/**/*.html',
     "img" : "src/img/**/*.*",
-    "js" : "src/**/*.js",
+    "js" : "src/js/*.js",
     "scss" : "src/**/*.scss",
     "fonts" : "src/fonts/**/*.*",
     "watch" : "src/**/*.*"
@@ -93,6 +93,7 @@ gulp.task('js', function () {
                 }
             })
         }))
+        .pipe(include())
         .pipe(smaps.init())
         .pipe(smaps.write("./"))
         .pipe(rename({dirname: ''}))
@@ -123,13 +124,7 @@ gulp.task('vendor:_fonts.scss', function () {
 });
 
 gulp.task('vendor:js', function () {
-    return gulp.src([bower.jquery,
-        bower.bootstrap.js + 'dropdown.js',
-        bower.bootstrap.js + 'collapse.js',
-        bower.bootstrap.js + 'button.js',
-        bower.bootstrap.js + 'tab.js',
-        bower.bootstrap.js + 'modal.js'
-    ])
+    return gulp.src([bower.jquery])
         .pipe(concat('vendor.js'))
         .pipe(rename('vendor.min.js'))
         .pipe(gulp.dest(path_build.js));
@@ -158,14 +153,6 @@ gulp.task('browserSync', function() {
 });
 
 
-// gulp.task('server', function () {
-//     browserSync.init({
-//         server: "./"+path_build.build,
-//         index: "ui-kit.html"
-//     });
-//     browserSync.watch(path_src.watch).on('change', browserSync.reload);
-// });
-
-gulp.task('build', gulp.series('clean','sass',gulp.parallel('img','fonts'),'js','html:all'));
+gulp.task('build', gulp.series('clean','sass',gulp.parallel('img','vendor:js','fonts'),'js','html:all'));
 
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'browserSync')));

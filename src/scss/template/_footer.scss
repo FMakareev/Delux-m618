@@ -68,14 +68,19 @@
       margin-bottom: 6.25rem;
     }
 
-    &-list {
-
-    }
-
     &-item {
+      position: relative;
       margin-bottom: 1.875rem;
       font-size: 1.563rem;
       line-height: 2.5rem;
+      padding-left: calcRem(50px);
+      i{
+        position: absolute;
+        top: 0;
+        left: -7px;
+        color: #9c9c9c;
+        font-size: calcRem(40px);
+      }
     }
 
   }
@@ -87,6 +92,7 @@
   &__subscribe {
 
     &-wrapper {
+      margin-bottom: 45px;
       font-size: 0;
       white-space: nowrap;
       overflow: hidden;
@@ -117,12 +123,13 @@
       width: 5.313rem;
       height: 5rem;
       vertical-align: top;
-      font-size: 1.75rem;
-      border: 2px solid rgba(96,96,96, 0.5);
+      font-size: calcRem(35px);
+      border: 2px solid rgba(96, 96, 96, 0.5);
       border-left: none;
-      background-color: rgba(96,96,96, 0.5);
+      background-color: rgba(96, 96, 96, 0.5);
       -webkit-border-radius: 0 6px 6px 0;
       -moz-border-radius: 0 6px 6px 0;
+      color: #323232;
       border-radius: 0 6px 6px 0;
     }
 
@@ -134,12 +141,31 @@
 
   &__social{
     &-list{
-
+      text-align: center;
     }
     &-item{
       display: inline-block;
+      padding:0 7px;
     }
     &-link{
+      display: block;
+      width: calcRem(60px);
+      height: calcRem(60px);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+      font-size: calcRem(30px);
+      line-height: calcRem(63px);
+      text-align: center;
+      border: 1px solid #979797;
+      color: #979797;
+      transition: all .225s;
+
+      &:hover {
+        color: #fff;
+        border-color: #fff;
+      }
 
     }
   }

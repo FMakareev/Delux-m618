@@ -1,10 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@@include('template/head.html',{
+"title" : "Статьи и новости",
+"css" : "index.css"
+})
+@@include('template/header.html')
+<main class="main">
 
-</body>
-</html>
+
+    <section class="store">
+        <div class="container">
+            <h2 class="main__title _left underline _green">
+                Каталог товаров
+            </h2>
+        </div>
+        <div class="container">
+
+            <ul class="store-list clearfix">
+                <li class="store-col">
+                    <div class="store-item">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col ">
+                    <div class="store-item _discount">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-state">
+                            -25%
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col">
+                    <div class="store-item _gift">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-state">
+                            -25%
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col">
+                    <div class="store-item">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col">
+                    <div class="store-item">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col ">
+                    <div class="store-item _discount">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-state">
+                            -25%
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col">
+                    <div class="store-item _gift">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-state">
+                            -25%
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+                <li class="store-col">
+                    <div class="store-item">
+                        <div class="store-price">
+                            2333 руб
+                        </div>
+                        <div class="store-pic">
+                            <img src="img/content/content-img.png" alt="" class="store-pic__img">
+                        </div>
+                        <div class="store-title">Model Name</div>
+                        <a href="/description.html" class="store-link">Купить</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </section>
+
+
+<section class="articles-selection">
+    <div class="container">
+        @@include('template/articles-list.html', {
+        "length" : "2"
+        })
+    </div>
+</section>
+
+
+</main>
+
+@@include('template/footer.html')
+@@include('template/script.html')

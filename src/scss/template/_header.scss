@@ -14,11 +14,27 @@
 
   &__menu{
     &-list{
-      margin-left: -2.5rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 56px;
+      display: none;
+      padding:1.25rem 0;
+      background-color: $color8;
+      z-index: 3;
+      @media(min-width: 992px) {
+        position: static;
+        display: block;
+        margin-left: -2.5rem;
+        padding: 0;
+      }
+
     }
     &-item{
-      display: inline-block;
       margin:0 1.25rem;
+      @media(min-width: 992px) {
+        display: inline-block;
+      }
     }
     &-link{
       display: block;
@@ -29,9 +45,12 @@
       border-radius: 6px;
       color: #fff;
       font-size: 2rem;
-      transition: all .225s ;
+      transition: all .225s;
       
-      &:hover,&:active,&:focus,.active{
+      &:hover,
+      &:active,
+      &:focus,
+      &.active {
         border-color: $light-green;
         color: $light-green;
       }
@@ -79,10 +98,23 @@
       width: 4.688rem;
       border-radius: 6px 0 0 6px;
       background-color: $dark-green;
+      font-size: calcRem(40px);
+      padding: calcRem(15px) 0;
+
+      color: #84e6c6;
     }
 
     &:hover {
       background-color: $dark-green;
+    }
+
+  }
+
+  &__burger {
+    display: block;
+    padding:1.25rem;
+    @media(min-width: 992px) {
+      display: none;
     }
 
   }

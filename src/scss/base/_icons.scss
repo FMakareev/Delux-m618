@@ -1,23 +1,158 @@
 .sprite__logo {
   display: inline-block;
   vertical-align: middle;
-  background: url('../img/icons/sprite__logo.png') no-repeat top left;
+  //background: url('../img/icons/sprite__logo.png') no-repeat top left;
 }
 
 .sprite__logo._compaero-logo {
+  background-image: url('../img/icons/compaero-logo.png');
   background-position: 0px 0px;
-  width: 153px;
-  height: 41px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 9.5625rem;
+  height: 2.5625rem;
 }
 
 .sprite__logo._company-logo {
-  background-position: 0px -61px;
-  width: 197px;
-  height: 64px;
+  background-image: url('../img/icons/company-logo.png');
+  background-position: 0px 0px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  //width: 197px;
+  width: 12.3125rem;
+  //height: 64px;
+  height: 4rem;
 }
 
 .sprite__logo._ezidea-logo {
-  background-position: 0px -145px;
-  width: 51px;
-  height: 40px;
+  background-image: url('../img/icons/ezidea-logo.png');
+  background-position: 0px 0px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  //width: 51px;
+  width: 3.1875rem;
+  //height: 40px;
+  height: 2.5rem;
+}
+
+@font-face {
+  font-family: 'icons-font';
+  src:  url('#{$icomoon-font-path}/icons-font.eot?u6vvwo');
+  src:  url('#{$icomoon-font-path}/icons-font.eot?u6vvwo#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/icons-font.ttf?u6vvwo') format('truetype'),
+  url('#{$icomoon-font-path}/icons-font.woff?u6vvwo') format('woff'),
+  url('#{$icomoon-font-path}/icons-font.svg?u6vvwo#icons-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cash {
+  &:before {
+    content: $icon-cash;
+  }
+}
+.icon-yandex-cashbox {
+  &:before {
+    content: $icon-yandex-cashbox;
+  }
+}
+.icon-close-envelope {
+  &:before {
+    content: $icon-close-envelope;
+  }
+}
+.icon-house-building {
+  &:before {
+    content: $icon-house-building;
+  }
+}
+.icon-gift {
+  &:before {
+    content: $icon-gift;
+  }
+}
+.icon-paper-plane {
+  &:before {
+    content: $icon-paper-plane;
+  }
+}
+.icon-telephone {
+  &:before {
+    content: $icon-telephone;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-google {
+  &:before {
+    content: $icon-google;
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location;
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-minus {
+  &:before {
+    content: $icon-minus;
+  }
+}
+.icon-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}
+.icon-shopping-cart {
+  &:before {
+    content: $icon-shopping-cart;
+  }
 }
